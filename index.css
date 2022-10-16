@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url(./assets/waffles-with-strawberry-ice-cream-background_53876-97603.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+    text-align: left;
+    font-weight: bold;
+}
+
+h2 {
+    padding: 24px;
+}
+
+h4 {
+    padding: 12px;
+}
+h5 {
+    padding: 6PX;
+}

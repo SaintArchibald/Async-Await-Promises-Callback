@@ -5,9 +5,103 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ASYNC JS</title>
+    <link rel="stylesheet" href="index.css">
     <script src="index.js" defer></script>
 </head>
 <body>
-    
-</body>
-</html>
+
+    <h1>In this project, I created a scenario where:</h1>
+    <ul>
+        <li>An Ice-cream shop has a selected stock of options in which a customer can choose from (stocks)</li>
+        <li>The customer can then make an order (customerOrder).</li>
+        <li>Then customer can place an order (order).</li>
+        <li>then when the order is received and processed, production begins (production)</li>
+        <li>Then when production finishes, the customer receives their Ice-cream Yayy!</li>
+    </ul>
+
+    <p>I used a method called callback hell. Ouch!</p>
+    <p>Make sure to check out the inspect element, console.</p>
+
+    <div>
+        <h2>JAVASCRIPT USED BELOW</h2>
+        <div>
+           <h4>let stocks = {</h4> 
+                <p>
+                    fruits: ["Strawberry","Grapes","Banana","Mango","cherry","watermelon"],
+                    <br> liquid: ['Water','and','Ice'],
+                    <br> holder: ["Cone","Cup","Sticks","Square"],
+                    <br> toppinps: ["Sprinkles","Peanut Butter","Chocolate","Pretzels","Marshmallows","Sour Watermelon","Coconut Flakes","Pop-Tart","Oreos","Raisins","waffers","Honey","Caramel","Gummy Bears","Cake"]
+                </p>
+           <h4>}</h4>  
+        </div> 
+
+        <div>
+           <h4>let CustomerOrder = { </h4> 
+                <p>
+                   pickedFruit: stocks.fruits[0],
+                   <br> pickedLiquids: stocks.liquid,
+                   <br> pickedHolder: stocks.holder[0],
+                   <br> pickedTopping: stocks.toppinps[0]
+                </p>
+           <h4>}</h4> 
+        </div> 
+            
+        <div>
+            <h4> 
+                let order = (call_production) => {
+            </h4>
+                
+               <h5>setTimeout(() => { </h5> 
+                    console. log("Customer has submitted their order. It follows...") 
+                    <h5>setTimeout(() => {</h5>
+                     console. log(`${CustomerOrder.pickedFruit} was selected.`)
+                       <br> console. log(`${CustomerOrder.pickedLiquids} is neccessary.`)
+                       <br> console. log(`${CustomerOrder.pickedHolder} was selected.`)
+                       <br> console. log(`${CustomerOrder.pickedTopping} was selected.`)
+                        
+                       <h5>call_production()</h5> 
+                    },2000) <br>
+                },000) <br>
+           <h5>}</h5> 
+        </div>    
+        
+        <div>
+
+           <h4>let production = () => {</h4> 
+                
+               <h5>setTimeout(() => {</h5> 
+                    console. log("Customer Order has been proccessed, production has started.")
+                    
+                   <H5>setTimeout(() => {</H5> 
+                        console. log(`The ${CustomerOrder.pickedFruit} has been chopped.`)
+                        
+                       <h5>setTimeout(() => {</h5> 
+                                console. log(`${CustomerOrder.pickedLiquids} was added.`)
+                            
+                               <h5>setTimeout(() => {</h5> 
+                                    console. log('The machine has blended the Ingredients.')
+                                    
+                                   <h5>setTimeout(() => {</h5> 
+                                        console. log(`The Ice Cream has been placed in the ${CustomerOrder.pickedHolder}.`)
+                                        
+                                       <h5>setTimeout(() => {</h5> 
+                                            console. log(`${CustomerOrder.pickedTopping} was added.`)
+                                        
+                                           <h5>setTimeout(() => {</h5> 
+                                                console. log("Order has been filled and handed to customer. Have a great day! Next") <br>
+                                            },2000) <br>
+                                        },3000) <br>
+                                    },2000) <br>
+                                },1000) <br>
+                            },1000) <br>
+                        },2000) <br>
+                    },0000) <br>
+               <h5>}</h5> 
+                
+              <h4>order(production)</h4>  
+            </div>
+            
+        </div>
+        
+    </body>
+    </html>
